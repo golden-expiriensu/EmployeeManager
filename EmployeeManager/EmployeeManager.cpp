@@ -1,23 +1,21 @@
 ﻿#include <iostream>
-#include "Employee.h"
+#include "DataBase.h"
 
 using namespace std;
 using namespace Records;
 
 int main()
 {
-    Employee emp;
-    emp.setFirstName("John");
-    emp.setLastName("Wick");
-    emp.setNumber(37);
-    emp.display();
-
-    emp.promote();
-    emp.promote(100);
-    emp.hire();
-    emp.display();
-
-    emp.demote(700);
-    emp.fire();
-    emp.display();
+	DataBase db;
+	Employee& emp1 = db.addEmployee("John", "Watson");
+	emp1.promote(500);
+	Employee& emp2 = db.addEmployee("Sherlock", "Holmes");
+	emp2.demote();
+	db.DisplayAll();
+	emp2.fire();
+	db.DisplayCurrent();
+	db.DisplayFormer();
+	Employee& emp3 = db.getEmployee("Sherlock", "Holmes");
+	emp3.hire();
+	db.DisplayCurrent();
 }

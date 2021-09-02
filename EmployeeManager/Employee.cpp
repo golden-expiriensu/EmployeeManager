@@ -17,11 +17,11 @@ namespace Records
 	void Employee::display() const
 	{
 		cout << "Employee: " << getFirstName()
-			<< " " << getLastName() << endl;
-		cout << "----------------------------" << endl;
+			<< " " << getLastName() << endl << endl;
 		cout << "Number: " << getNumber() << endl;
 		cout << (isHired() ? "Current employee" : "Former employee") << endl;
-		cout << "Salary: " << getSalary() << "\n\n";
+		cout << "Salary: " << getSalary() << endl;
+		cout << "----------------------------\n";
 	}
 
 	// getters and setters
