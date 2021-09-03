@@ -11,7 +11,9 @@ namespace Records
 	public:
 		Employee& addEmployee(const std::string& firstName,
 			const std::string& lastName);
+		// if no employee is found, throws logic_error
 		Employee& getEmployee(int number);
+		// here the same
 		Employee& getEmployee(const std::string firstName,
 			const std::string& lastName);
 
